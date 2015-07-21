@@ -1,0 +1,73 @@
+
+@import "../../bourbon/bourbon";
+
+#dashboard {
+    background-color: #32363a;
+    background-image: none;
+    border-right: 1px solid transparent;
+    color: #fff;
+    cursor: default;
+
+    h1 {
+        text-align: right;
+
+        span {
+            color: #aaa;
+        }
+    }
+
+    h3 {
+        color: #7296ad;
+    }
+
+    .variable {
+        // Flex container
+        @include align-items(stretch);
+        @include display(flex);
+        @include flex-direction(row);
+        @include flex-wrap(nowrap);
+        @include justify-content(flex-start);
+
+        @include transition(background-color 0.2s ease-in-out);
+
+        cursor: pointer;
+        font-size: 12px;
+        border-bottom: 1px solid lighten(#32363a, 3%);
+        padding: 30px 35px;
+
+        &:hover,
+        &.active {
+            background-color: darken(#32363a, 2%);
+        }
+
+        span {
+            @include flex(1);
+
+            &.name {
+                @include order(0);
+
+                color: #a1acb5;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            &.value {
+                @include order(1);
+
+                text-align: center;
+
+                span {
+                    color: #a1acb5;
+                    padding-left: 2px;
+                }
+            }
+
+            &.chart {
+                @include flex-grow(1);
+                @include order(2);
+            }
+        }
+    }
+}

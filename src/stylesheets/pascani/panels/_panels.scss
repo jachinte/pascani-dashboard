@@ -1,0 +1,89 @@
+
+@import "dashboard";
+
+// Panels' Internal Layout
+
+.panel {
+    cursor: default;
+
+    > header {
+        // Flex container
+        @include align-items(stretch);
+        @include display(flex);
+        @include flex-direction(row);
+        @include flex-wrap(nowrap);
+        @include justify-content(flex-start);
+
+        padding: 35px;
+
+        nav {
+            @include flex(1);
+
+            &.left {
+                @include order(0);
+            }
+
+            &.right {
+                @include order(1);
+
+                // Flex container
+                @include align-items(stretch);
+                @include display(flex);
+                @include flex-direction(row);
+                @include flex-wrap(nowrap);
+                @include justify-content(flex-end);
+            }
+
+            a {
+                @include size(24px 24px);
+
+                margin-right: 14px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+
+    > article {
+        font-size: 13px;
+
+        h1 {
+            font-size: 14px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+
+            span {
+                font-size: 22px;
+            }
+        }
+
+        h3 {
+            font-size: 12px;
+            font-weight: normal;
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        .with-padding {
+            padding: 35px;
+        }
+    }
+}
+
+// Panels' styles
+
+.panel {
+    @include linear-gradient(to top, whitesmoke 0%, white 100%, $fallback: white);
+
+    border-right: 1px solid #DDDDDD;
+    font-size: 13px;
+
+    &.floating {
+        background-color: #EEEEEE;
+        border-right: 1px solid #CCCCCC;
+    }
+}

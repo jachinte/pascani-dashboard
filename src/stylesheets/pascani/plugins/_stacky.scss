@@ -1,0 +1,51 @@
+@import "../../bourbon/bourbon";
+
+body,
+html,
+.panels,
+.panel {
+    @include size(auto 100%);
+}
+
+.panels {
+    // Remove horizontal space between inline-block elements
+    font-size: 0;
+
+    overflow-x: auto;
+    position: relative;
+    white-space: nowrap;
+    width: auto;
+}
+
+@include keyframes(active) {
+    0%   { opacity: 1 }
+    100% { opacity: 0 }
+}
+
+.panel.highlight {
+    z-index: 999 !important;
+}
+
+.panel {
+    @include prefixer(box-sizing, border-box, webkit moz spec);
+
+    // Remove bottom space in inline-block elements
+    vertical-align: top;
+
+    display: inline-block;
+    position: relative;
+
+    &.highlight {
+        @include animation(active 0.5s ease-in 1);
+    }
+
+    &.floating {
+        position: absolute;
+    }
+
+    &.wide     { width: 700px; }
+    &.medium   { width: 500px; }
+    &.regular  { width: 400px; }
+    &.thin     { width: 350px; }
+    &.expanded { width: 100%;  }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pascani Dashboard</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Unified dashboard for Pascani Monitors" />
+	<meta name="keywords" content="pascani, sca, dashboard, monitoring, quality attributes, performance" />
+	<meta name="author" content="Miguel Jiménez" />
+
+	<link rel="stylesheet" type="text/css" href="static/css/application.css">
+	<script src="static/scripts/jquery-2.1.3.min.js"></script>
+	<script src="static/scripts/jquery.stacky.min.js"></script>
+	<script src="static/scripts/jquery.peity.min.js"></script>
+
+	<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
+    <script src="static/scripts/modernizr.custom.25376.js"></script>
+</head>
+<body>
+
+	<div class="perspective">
+		<div id="outer-wrapper" class="perspective-wrapper">
+			<div id="wrapper" class="perspective-content">
+
+				<aside id="sidebar">
+					<nav class="top">
+						<a href="#" id="open-perspective" class="fa fa-bars" title="Open Menu"></a>
+						<a href="#" class="fa fa-bar-chart active" title="Dashboard"></a>
+						<a href="#" class="fa fa-exclamation-triangle" title="Alerts"></a>
+						<a href="#" class="fa fa-sitemap" title="Monitoring infrastructure"></a>
+						<a href="#" class="fa fa-code" title="Deploy new monitor"></a>
+					</nav>
+					<nav class="bottom">
+						<a href="https://github.com/jachinte/pascani" target="_blank" class="fa fa-github" title="Source code"></a>
+						<a href="javascript:void(0);" class="fa fa-umbrella" title="The Pascani project"></a>
+					</nav>
+				</aside><!-- /#sidebar -->
+
+				<section id="main">
+
+					<section class="panel wide" id="dashboard">
+						<header>
+							<nav class="left" />
+							<nav class="right">
+								<a href="#" class="icon icon-minimize-white collapse"></a>
+								<a href="#" class="icon icon-maximize-white expand"></a>
+							</nav>
+						</header>
+
+						<article>
+							<div class="with-padding">
+								<h1>System <span>&raquo;</span> Performance</h1>
+							</div>
+
+							<a class="variable">
+								<span class="name">Throughput</span>
+								<span class="value">90<span>T/S</span></span>
+								<span class="chart ok">
+									<span class="chart-content">20,24,87,17,90,90,19,10,11,90</span>
+								</span>
+							</a>
+							<a class="variable">
+								<span class="name">Response time</span>
+								<span class="value">0.5<span>s</span></span>
+								<span class="chart ok">
+									<span class="chart-content">0.2,0.3,0.4,0.1,0.6,0.5,0.8,0.5,1.0,0.5</span>
+								</span>
+							</a>
+							<a class="variable">
+								<span class="name">Utilization</span>
+								<span class="value">98.5<span>%</span></span>
+								<span class="chart notok">
+									<span class="chart-content">0.28,0.10,0.30,0.40,0.48,0.30,0.30,.0.50,0.60,0.985</span>
+								</span>
+							</a>
+							<a class="variable">
+								<span class="name">Disk</span>
+								<span class="value">68<span>%</span></span>
+								<span class="chart notok">
+									<span class="chart-content">0.10,0.20,0.24,0.26,0.27,0.30,0.40,0.55,0.60,0.68</span>
+								</span>
+							</a>
+							<a class="variable">
+								<span class="name">Transactions</span>
+								<span class="value">32<span>K</span></span>
+								<span class="chart ok">
+									<span class="chart-content">10,12,16,19,20,25,27,28,29,32</span>
+								</span>
+							</a>
+						</article>
+					</section>
+
+					<section class="panel wide" id="monitoring-infrastructure">
+						
+					</section>
+
+				</section><!-- /#main -->
+
+			</div><!-- /#wrapper -->
+
+		</div><!-- /#outer-wrapper -->
+
+		<div class="appmenu">
+	        <nav class="outer-nav left vertical">
+	            <a href="#">Home</a>
+	            <a href="#">Instalation</a>
+	            <a href="#">Programming</a>
+	            <a href="#">Deployment</a>
+	            <a href="#">FAQ</a>
+	            <a href="#">About</a>
+			</nav>
+	    </div>
+
+	</div><!-- /.perspective -->
+
+	<script>
+		var container = $('#main').Stacky();
+
+		$('.variable').click(function(e) {
+
+			container.data('Stacky').push({
+				content: '<div style="width: 500px;"></div>'
+			});
+
+			$('.variable').removeClass('active');
+			$(this).addClass('active');
+		});
+
+		var good = $('.notok .chart-content').peity('line', {
+			fill: "rgba(255, 0, 0, 0.1)",
+			stroke: "red",
+			strokeWidth: 2,
+			width: '100%'
+		});
+
+		var bad = $('.ok .chart-content').peity('line', {
+			fill: "rgba(82, 154, 236, 0.1)",
+			stroke: "#529aec",
+			strokeWidth: 2,
+			width: '100%'
+		});
+	</script>
+
+	<script src="static/scripts/classie.js"></script>
+	<script src="static/scripts/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+@import "../neat/neat";
+@import "../bourbon/bourbon";
+
+a {
+    @include user-select(none);
+}
+
+#outer-wrapper {
+    @include size(100%);
+
+    background: transparent;
+
+    #wrapper {
+        @include outer-container;
+        @include size(auto 100%);
+
+        background: #eee;
+
+        #sidebar {
+            // Flex container
+            @include align-items(stretch);
+            @include display(flex);
+            @include flex-direction(column);
+            @include flex-wrap(nowrap);
+            @include justify-content(flex-start);
+
+            @include size(60px 100%);
+
+            background-color: #252525;
+            float: left;
+
+            nav {
+                @include flex(1);
+
+                &.top {
+                    @include order(0);
+                    @include flex-grow(1);
+
+                    // Flex container
+                    @include align-items(stretch);
+                    @include display(flex);
+                    @include flex-direction(column);
+                    @include flex-wrap(nowrap);
+                    @include justify-content(flex-start);
+                }
+
+                &.bottom {
+                    @include order(1);
+
+                    // Flex container
+                    @include align-items(stretch);
+                    @include display(flex);
+                    @include flex-direction(column);
+                    @include flex-wrap(nowrap);
+                    @include justify-content(flex-end);
+                }
+
+                a {
+                    @include size(100% 60px);
+                    @include transition(background-color 0.2s ease-in-out);
+
+                    background-color: #2b2e2f;
+                    color: #76838c;
+                    font-size: 20px;
+                    line-height: 60px;
+                    text-align: center;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: lighten(#2b2e2f, 5%);
+                        color: #3493d7;
+                    }
+
+                    &.active {
+                        background-color: darken(#2b2e2f, 2%);
+                        color: #3493d7;
+                    }
+                }
+            }
+        }
+
+        #main {
+            @include size(calc(100% - 60px) 100%);
+
+            float: left;
+        }
+
+    }
+
+}
