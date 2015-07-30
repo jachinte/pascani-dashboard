@@ -5,7 +5,7 @@
     "UI",
     "DOM"
   ],
-  "version": "0.1.3",
+  "version": "0.1.5",
   "author": {
     "name": "Miguel Jiménez",
     "web": "http://migueljimenez.co"
@@ -47,11 +47,11 @@
   "dependencies": {
     "jquery": ">=1.7.2"
   },
-  "_release": "0.1.3",
+  "_release": "0.1.5",
   "_resolution": {
     "type": "version",
-    "tag": "0.1.3",
-    "commit": "e3100cb25d738b35f4e8b0ec5660a7608ed433fd"
+    "tag": "0.1.5",
+    "commit": "7a0c556b81fbe2f06edbc83bfafedefba6d73476"
   },
   "_source": "git://github.com/jachinte/jquery.secretnav.git",
   "_target": "*",
