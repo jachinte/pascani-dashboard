@@ -1,0 +1,62 @@
+{
+  "name": "jquery.stacky",
+  "description": "Stacky is a jQuery plugin that gives you the ability to open panels horizontally, as you need them.",
+  "categories": [
+    "UI",
+    "DOM"
+  ],
+  "version": "0.3.7",
+  "author": {
+    "name": "Miguel Jiménez",
+    "web": "http://migueljimenez.co"
+  },
+  "keywords": [
+    "browser",
+    "animated",
+    "animation",
+    "jquery",
+    "stacking",
+    "panel"
+  ],
+  "homepage": "https://github.com/jachinte/jquery.stacky",
+  "bugs": {
+    "web": "https://github.com/jachinte/jquery.stacky/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/jachinte/jquery.stacky/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jachinte/jquery.stacky.git"
+  },
+  "github": "https://github.com/jachinte/jquery.stacky",
+  "main": [
+    "./dist/js/jquery.stacky.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "demo",
+    "tests",
+    "changes.txt",
+    "package.json",
+    "composer.json",
+    "stacky.jquery.json"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.2"
+  },
+  "_release": "0.3.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.7",
+    "commit": "552104c48b2c743622d2165e731aabae48eee86c"
+  },
+  "_source": "git://github.com/jachinte/jquery.stacky.git",
+  "_target": "*",
+  "_originalSource": "jquery.stacky"
+}

@@ -84,8 +84,40 @@ a {
             @include size(calc(100% - 60px) 100%);
 
             float: left;
+
+            &::-webkit-scrollbar {
+                background: red;
+                border-top: 1px solid rgba(0, 0, 0, 0.3);
+                -webkit-appearance: none;
+            }
+
+            &::-webkit-scrollbar:vertical {
+                width: 9px;
+            }
+
+            &::-webkit-scrollbar:horizontal {
+                height: 9px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #bbb;
+
+                &:hover {
+                    background: #aaa;
+                }
+            }
+
+            &::-webkit-scrollbar-track { 
+                background-color: #eaeaea;
+                border-top: 1px solid #ccc;
+            } 
         }
 
     }
 
+}
+
+#secretnav > a {
+    font-family: "Roboto";
+    font-weight: 200;
 }

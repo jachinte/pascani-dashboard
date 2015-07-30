@@ -1,0 +1,51 @@
+{
+  "name": "Pascani Dashboard",
+  "description": "A Web-based dashboard to visualize the Pascani monitoring infrastructure",
+  "categories": [
+    "UI"
+  ],
+  "version": "0.1.0",
+  "author": {
+    "name": "Miguel Jiménez",
+    "web": "http://migueljimenez.co"
+  },
+  "keywords": [
+    "jquery",
+    "pascani",
+    "monitoring",
+    "dashboard"
+  ],
+  "homepage": "https://github.com/jachinte/pascani-dashboard",
+  "bugs": {
+    "web": "https://github.com/jachinte/pascani-dashboard/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/jachinte/pascani-dashboard/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jachinte/pascani-dashboard.git"
+  },
+  "github": "https://github.com/jachinte/pascani-dashboard",
+  "main": [
+    "./dist/js/pascani-dashboard.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "demo",
+    "tests",
+    "changes.txt",
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.2",
+    "jquery.stacky": "latest",
+    "jquery.secretnav": "latest",
+    "peity": "latest"
+  }
+}
