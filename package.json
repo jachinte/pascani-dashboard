@@ -1,0 +1,43 @@
+{
+  "name": "pascani-dashboard",
+  "productName": "Pascani Dashboard",
+  "version": "0.1.0",
+  "description": "A Web-based dashboard to visualize the Pascani monitoring infrastructure",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "user/repo",
+  "author": {
+    "name": "Miguel Jiménez",
+    "email": "migueljimenezachinte<a>gmail<d>com",
+    "url": "http://migueljimenez.co"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore=dist --prune --asar --all --version=0.30.0"
+  },
+  "files": [
+    "index.html",
+    "index.js",
+    "static/css/application.css",
+    "bower_components/jquery.stacky/dist/css/jquery.stacky.css",
+    "bower_components/jquery.secretnav/dist/css/jquery.secretnav.css",
+    "bower_components/jquery/dist/jquery.min.js",
+    "bower_components/jquery.stacky/dist/js/jquery.stacky.min.js",
+    "bower_components/jquery.secretnav/dist/js/jquery.secretnav.min.js",
+    "bower_components/peity/jquery.peity.min.js",
+    "static/scripts/modernizr.custom.25376.js"
+  ],
+  "keywords": [
+    "electron-app"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.1.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.0.0",
+    "electron-prebuilt": "^0.30.0"
+  }
+}
