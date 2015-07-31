@@ -1,0 +1,3 @@
+[submodule "src/stylesheets/pascani/fonts/font-awesome"]
+	path = src/stylesheets/pascani/fonts/font-awesome
+	url = git://github.com/jachinte/pascani-dashboard
